@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile, copyFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
@@ -226,10 +226,12 @@ ${gates}
 - \`scholarships.csv\` — spreadsheet import
 - \`email-digest.gs\` — Google Apps Script weekly mailer
 - \`data/scholarships.json\` — source of truth
+- \`scholarships.json\` — public feed read by the Gmail script
 - \`digests/\` — weekly notes written after each re-verification
 - \`digests/email-preview.html\` — sample of the weekly email
 `;
 await write("scholarships.md", md);
+await copyFile(path.join(here, "data/scholarships.json"), path.join(here, "scholarships.json"));
 
 console.log(`Built ${list.length} scholarships`);
 console.log(`Deadlines: ${list.filter((s) => day(s.deadline) >= today).length} upcoming`);

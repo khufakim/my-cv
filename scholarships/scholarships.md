@@ -67,5 +67,6 @@
 - `scholarships.csv` — spreadsheet import
 - `email-digest.gs` — Google Apps Script weekly mailer
 - `data/scholarships.json` — source of truth
+- `scholarships.json` — public feed read by the Gmail script
 - `digests/` — weekly notes written after each re-verification
 - `digests/email-preview.html` — sample of the weekly email
