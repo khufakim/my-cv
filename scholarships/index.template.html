@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scholarship Desk — Khuzaifa Farid</title>
+<meta name="description" content="Verified fully funded scholarship tracker for Europe, North America and East Asia, with deadlines, eligibility checks, checklists and email alerts.">
+<style>
+  :root{
+    --ink:#050f18;
+    --navy:#081a2a;
+    --panel:#0b2236;
+    --panel-2:#0e2a42;
+    --line:rgba(255,255,255,.09);
+    --line-2:rgba(255,255,255,.16);
+    --text:#e9f2f8;
+    --muted:#8ba4b6;
+    --muted-2:#6d8799;
+    --cyan:#55c2e8;
+    --teal:#2dd4bf;
+    --green:#43d19a;
+    --amber:#f5b74e;
+    --rose:#f2778c;
+    --violet:#a9a4ff;
+    --radius:18px;
+    --mono:"Cascadia Code","SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    --sans:"Segoe UI Variable","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:184px}
+  body{
+    margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;line-height:1.55;
+    background-image:
+      radial-gradient(900px 520px at 82% -8%, rgba(85,194,232,.16), transparent 62%),
+      radial-gradient(700px 480px at 8% 4%, rgba(45,212,191,.09), transparent 60%),
+      linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+    background-size:auto,auto,72px 72px,72px 72px;
+  }
+  a{color:inherit}
+  button{font-family:inherit}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)}
+  .muted{color:var(--muted)}
+  .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+  /* header */
+  .site-head{
+    position:sticky;top:0;z-index:50;height:64px;
+    background:rgba(5,15,24,.78);backdrop-filter:blur(16px) saturate(140%);
+    border-bottom:1px solid var(--line);
+  }
+  .head-in{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+  .mark{
+    width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    background:linear-gradient(145deg,var(--cyan),var(--teal));color:#04121c;
+    font-weight:800;font-size:12px;letter-spacing:.02em;flex:none;
+  }
+  .brand .mark{display:grid;place-items:center;color:#04121c;font-size:12px;letter-spacing:.02em;text-transform:none;margin-top:0}
+  .brand b{font-size:14px;letter-spacing:.01em}
+  .brand span{display:block;font-size:10.5px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-top:1px}
+  .head-nav{display:flex;align-items:center;gap:4px}
+  .head-nav a{
+    text-decoration:none;font-size:12.5px;color:var(--muted);padding:8px 11px;border-radius:9px;
+    transition:color .2s,background .2s;
+  }
+  .head-nav a:hover{color:var(--text);background:rgba(255,255,255,.05)}
+  .head-mail{
+    display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:12px;
+    border:1px solid var(--line-2);padding:8px 12px;border-radius:999px;color:var(--text);
+    transition:border-color .2s,background .2s;
+  }
+  .head-mail:hover{border-color:rgba(85,194,232,.6);background:rgba(85,194,232,.08)}
+  .dot-live{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(67,209,154,.14)}
+
+  /* hero */
+  .hero{padding:64px 0 30px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(340px,.85fr);gap:44px;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);
+    font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:20px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--cyan);opacity:.7}
+  h1{
+    margin:0;font-size:clamp(2.5rem,5.3vw,4.5rem);line-height:.98;letter-spacing:-.045em;font-weight:800;
+  }
+  h1 .grad{
+    background:linear-gradient(96deg,var(--cyan) 0%,var(--teal) 70%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{color:var(--muted);font-size:16px;max-width:56ch;margin:20px 0 0}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .pill{
+    display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-2);
+    border-radius:999px;padding:6px 11px;font-size:11.5px;color:var(--muted);
+  }
+  .pill b{color:var(--text);font-weight:600}
+
+  .next-card{
+    position:relative;border:1px solid var(--line-2);border-radius:22px;padding:24px;
+    background:linear-gradient(155deg,rgba(17,52,78,.92),rgba(7,24,38,.96));
+    box-shadow:0 30px 70px -30px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.07);
+    overflow:hidden;
+  }
+  .next-card::before{
+    content:"";position:absolute;inset:-40% -20% auto auto;width:260px;height:260px;border-radius:50%;
+    background:radial-gradient(circle,rgba(85,194,232,.24),transparent 68%);pointer-events:none;
+  }
+  .next-top{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative}
+  .next-top span{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;color:var(--green)}
+  .count{display:flex;align-items:flex-end;gap:8px;margin:14px 0 2px;position:relative}
+  .count b{font-family:var(--mono);font-size:64px;line-height:1;letter-spacing:-.05em;font-weight:700}
+  .count span{font-size:13px;color:var(--muted);padding-bottom:9px}
+  .next-name{font-size:16px;font-weight:650;margin:6px 0 3px;position:relative}
+  .next-sub{font-size:12px;color:var(--muted);position:relative}
+  .count-bar{height:4px;border-radius:99px;background:rgba(255,255,255,.08);margin:18px 0 12px;overflow:hidden;position:relative}
+  .count-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--teal));width:0;transition:width .8s ease}
+  .next-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;position:relative}
+  .next-foot a{font-size:12px;color:var(--cyan);text-decoration:none;font-weight:600}
+  .next-foot a:hover{text-decoration:underline}
+
+  /* profile bar */
+  .profile-bar{
+    margin:26px 0 0;border:1px solid var(--line);border-radius:16px;background:rgba(10,32,49,.72);
+    padding:15px 18px;display:grid;grid-template-columns:auto repeat(5,minmax(0,1fr)) auto;gap:12px;align-items:end;
+  }
+  .profile-bar .pb-title{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);line-height:1.3;padding-bottom:3px}
+  .profile-bar .pb-title b{display:block;color:var(--text);font-size:12px;letter-spacing:0;text-transform:none;margin-top:2px}
+  .field{display:grid;gap:4px;min-width:0}
+  .field label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2)}
+  .field input,.field select{
+    width:100%;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:8px;
+    color:var(--text);padding:8px 9px;font-size:12px;outline:none;min-width:0;
+  }
+  .field input:focus,.field select:focus{border-color:rgba(85,194,232,.6);box-shadow:0 0 0 3px rgba(85,194,232,.12)}
+  .field select option{background:#0b2236;color:var(--text)}
+  .reset{
+    background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:8px 11px;
+    font-size:11px;cursor:pointer;white-space:nowrap;
+  }
+  .reset:hover{color:var(--text);border-color:var(--line-2)}
+  .profile-note{grid-column:1/-1;font-size:11px;color:var(--muted-2);margin-top:-2px}
+  .profile-note b{color:var(--cyan);font-weight:600}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:26px 0 0}
+  .stat{
+    border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:rgba(11,34,54,.6);
+    position:relative;overflow:hidden;
+  }
+  .stat::after{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--accent,var(--cyan));opacity:.8}
+  .stat b{display:block;font-family:var(--mono);font-size:30px;letter-spacing:-.04em;line-height:1.1}
+  .stat span{font-size:11.5px;color:var(--muted)}
+  .stat small{display:block;font-size:10.5px;color:var(--muted-2);margin-top:5px}
+
+  /* sections */
+  section{padding:54px 0 0}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:20px}
+  .sec-head h2{margin:0;font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.03em;line-height:1.1}
+  .sec-head p{margin:6px 0 0;color:var(--muted);font-size:13px;max-width:70ch}
+  .sec-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+
+  /* toolbar */
+  .toolbar{
+    position:sticky;top:64px;z-index:30;background:rgba(5,15,24,.95);backdrop-filter:blur(16px);
+    padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:18px;
+  }
+  .toolbar-in{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .seg{display:inline-flex;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:10px;padding:3px}
+  .seg button{
+    border:0;background:none;color:var(--muted);font-size:12px;padding:7px 12px;border-radius:7px;cursor:pointer;white-space:nowrap;
+  }
+  .seg button[aria-pressed="true"]{background:var(--cyan);color:#04121c;font-weight:700}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{
+    border:1px solid var(--line);background:rgba(255,255,255,.025);color:var(--muted);
+    font-size:11.5px;padding:6px 10px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  }
+  .chip:hover{color:var(--text);border-color:var(--line-2)}
+  .chip[aria-pressed="true"]{color:var(--text);border-color:rgba(85,194,232,.65);background:rgba(85,194,232,.12)}
+  .chip b{font-weight:600;color:var(--muted-2);margin-left:3px}
+  .chip[aria-pressed="true"] b{color:var(--cyan)}
+  .search{margin-left:auto;position:relative;min-width:220px;flex:1;max-width:320px}
+  .search input{
+    width:100%;background:rgba(255,255,255,.045);border:1px solid var(--line);border-radius:9px;
+    color:var(--text);padding:9px 12px 9px 33px;font-size:12.5px;outline:none;
+  }
+  .search input:focus{border-color:rgba(85,194,232,.6)}
+  .search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.5}
+  .result-count{font-size:11px;color:var(--muted-2);white-space:nowrap}
+
+  /* cards */
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+  .card{
+    border:1px solid var(--line);border-radius:var(--radius);padding:20px 21px 16px;
+    background:linear-gradient(165deg,rgba(13,40,61,.75),rgba(8,25,39,.9));
+    position:relative;overflow:hidden;transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+    display:flex;flex-direction:column;
+  }
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--edge,var(--line-2));opacity:.9}
+  .card:hover{transform:translateY(-2px);border-color:rgba(85,194,232,.42);box-shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+  .card.applied{opacity:.72}
+  .card.applied::after{
+    content:"APPLIED";position:absolute;right:14px;top:44px;font-family:var(--mono);font-size:9px;
+    letter-spacing:.16em;color:var(--green);border:1px solid rgba(67,209,154,.4);padding:3px 6px;border-radius:4px;
+  }
+  .card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+  .loc{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-2)}
+  .loc .cc{color:var(--cyan);border:1px solid rgba(85,194,232,.28);border-radius:4px;padding:2px 5px;letter-spacing:.08em}
+  .status{
+    display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;padding:4px 8px;border-radius:999px;border:1px solid transparent;white-space:nowrap;
+  }
+  .status::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}
+  .s-open{color:var(--green);border-color:rgba(67,209,154,.3);background:rgba(67,209,154,.08)}
+  .s-soon{color:var(--amber);border-color:rgba(245,183,78,.3);background:rgba(245,183,78,.08)}
+  .s-expected{color:var(--violet);border-color:rgba(169,164,255,.28);background:rgba(169,164,255,.07)}
+  .s-closed{color:var(--rose);border-color:rgba(242,119,140,.3);background:rgba(242,119,140,.08)}
+  .card h3{font-size:18px;line-height:1.25;letter-spacing:-.015em;margin:0 0 8px;font-weight:650}
+  .deadline{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--text);margin:4px 0 10px}
+  .deadline .clock{width:13px;height:13px;flex:none;opacity:.7}
+  .deadline b{font-family:var(--mono);font-weight:600}
+  .deadline .left{color:var(--muted);font-size:11px}
+  .deadline .left.urgent{color:var(--amber)}
+  .fund{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 11px}
+  .tag{
+    font-size:10.5px;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:3px 6px;
+    background:rgba(255,255,255,.025);white-space:nowrap;
+  }
+  .tag.full{color:var(--teal);border-color:rgba(45,212,191,.28);background:rgba(45,212,191,.06);font-weight:600}
+  .fit{font-size:12.5px;color:var(--muted);margin:0 0 14px;flex:1}
+  .card-actions{display:flex;align-items:center;gap:10px;margin-top:auto;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;cursor:pointer;
+    border-radius:8px;font-size:12px;font-weight:600;padding:8px 12px;border:1px solid var(--line-2);
+    color:var(--text);background:rgba(255,255,255,.04);transition:background .2s,border-color .2s,color .2s;
+  }
+  .btn:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28)}
+  .btn.primary{background:var(--cyan);border-color:var(--cyan);color:#04121c}
+  .btn.primary:hover{background:#75d2f0;border-color:#75d2f0}
+  .btn.ghost{background:none;border-color:transparent;color:var(--muted);padding:8px 6px}
+  .btn.ghost:hover{color:var(--text);background:rgba(255,255,255,.04)}
+  .btn.applied{color:var(--green);border-color:rgba(67,209,154,.35);background:rgba(67,209,154,.08)}
+  details.kit{margin-top:12px;border-top:1px solid var(--line);padding-top:2px}
+  details.kit summary{
+    list-style:none;cursor:pointer;font-size:11.5px;color:var(--cyan);padding:9px 0 4px;
+    display:flex;align-items:center;gap:6px;user-select:none;
+  }
+  details.kit summary::-webkit-details-marker{display:none}
+  details.kit summary::after{content:"+";margin-left:auto;font-family:var(--mono);font-size:15px;color:var(--muted);line-height:1}
+  details.kit[open] summary::after{content:"–"}
+  .kit-body{font-size:12px;color:var(--muted);padding:6px 0 4px}
+  .kit-block{margin:10px 0}
+  .kit-block h4{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-2);margin:0 0 6px;font-weight:600}
+  .kit-block ul{margin:0;padding-left:16px}
+  .kit-block li{margin:3px 0}
+  .docs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px;margin:0;padding:0;list-style:none}
+  .docs li{display:flex;align-items:flex-start;gap:7px;font-size:11.5px;line-height:1.35;padding:2px 0}
+  .docs input{margin:2px 0 0;accent-color:var(--cyan);width:12px;height:12px;flex:none}
+  .fitcheck{
+    display:flex;align-items:flex-start;gap:7px;border-radius:7px;padding:7px 9px;font-size:11.5px;line-height:1.4;margin:10px 0 6px;
+  }
+  .fitcheck.ok{background:rgba(67,209,154,.08);border:1px solid rgba(67,209,154,.2);color:#a9e8cd}
+  .fitcheck.warn{background:rgba(245,183,78,.08);border:1px solid rgba(245,183,78,.22);color:#f2d39b}
+  .fitcheck.bad{background:rgba(242,119,140,.08);border:1px solid rgba(242,119,140,.22);color:#f5b3bf}
+  .fitcheck.info{background:rgba(85,194,232,.07);border:1px solid rgba(85,194,232,.18);color:#bfe8f6}
+  .fitcheck b{font-weight:700}
+  .src{font-size:10.5px;color:var(--muted-2);margin-top:8px}
+  .src a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+  .src .verified{color:var(--teal)}
+  .src .unverified{color:var(--amber)}
+  .empty{
+    grid-column:1/-1;border:1px dashed var(--line-2);border-radius:14px;padding:40px;text-align:center;color:var(--muted);
+  }
+
+  /* timeline */
+  .timeline{border:1px solid var(--line);border-radius:16px;background:rgba(9,28,44,.55);overflow:hidden}
+  .tl-month{padding:13px 20px;background:rgba(255,255,255,.035);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .tl-month b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+  .tl-month span{font-size:11px;color:var(--muted-2)}
+  .tl-row{
+    display:grid;grid-template-columns:96px 1fr auto;gap:16px;align-items:center;
+    padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.055);text-decoration:none;
+  }
+  .tl-row:last-child{border-bottom:0}
+  .tl-row:hover{background:rgba(85,194,232,.05)}
+  .tl-date{font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .tl-name{font-size:13px;font-weight:600}
+  .tl-name small{display:block;font-weight:400;font-size:10.5px;color:var(--muted-2);margin-top:1px}
+  .tl-days{font-family:var(--mono);font-size:10.5px;color:var(--muted-2);white-space:nowrap}
+  .tl-days.urgent{color:var(--amber)}
+
+  /* playbook */
+  .play-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+  .play{
+    border:1px solid var(--line);border-radius:14px;background:rgba(11,34,54,.55);padding:0;overflow:hidden;
+  }
+  .play summary{
+    list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;gap:12px;user-select:none;
+  }
+  .play summary::-webkit-details-marker{display:none}
+  .play summary::after{content:"+";margin-left:auto;font-family:var(--mono);font-size:17px;color:var(--muted)}
+  .play[open] summary::after{content:"–"}
+  .play .num{
+    width:26px;height:26px;border-radius:8px;display:grid;place-items:center;flex:none;
+    font-family:var(--mono);font-size:11px;color:var(--cyan);background:rgba(85,194,232,.09);border:1px solid rgba(85,194,232,.22);
+  }
+  .play summary b{font-size:13.5px;font-weight:650}
+  .play summary small{display:block;font-weight:400;font-size:11px;color:var(--muted-2);margin-top:1px}
+  .play-body{padding:0 18px 16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+  .play-body ul{margin:12px 0 0;padding:0;list-style:none}
+  .play-body li{display:flex;align-items:flex-start;gap:8px;padding:5px 0;line-height:1.45}
+  .play-body input{margin:3px 0 0;accent-color:var(--cyan);width:12px;height:12px;flex:none}
+  .tpl{margin-top:12px;border:1px solid var(--line);border-radius:9px;background:rgba(0,0,0,.18)}
+  .tpl summary{list-style:none;cursor:pointer;padding:9px 11px;font-size:11.5px;color:var(--cyan);display:flex;align-items:center;gap:8px}
+  .tpl summary::-webkit-details-marker{display:none}
+  .tpl summary::after{content:"view";margin-left:auto;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2)}
+  .tpl-bar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;border-top:1px solid var(--line);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2)}
+  .tpl-bar + pre{border-top:0;padding-top:8px}
+  .tpl pre{
+    margin:0;padding:12px;border-top:1px solid var(--line);white-space:pre-wrap;font-family:var(--mono);
+    font-size:10.5px;line-height:1.6;color:#c5d8e5;max-height:280px;overflow:auto;
+  }
+  .copy{
+    margin-left:auto;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--muted);
+    border-radius:5px;font-size:9.5px;padding:3px 7px;cursor:pointer;
+  }
+  .copy:hover{color:var(--text);border-color:var(--line-2)}
+  .gap-box{
+    grid-column:1/-1;border:1px solid rgba(245,183,78,.26);background:rgba(245,183,78,.055);
+    border-radius:14px;padding:16px 18px;font-size:12.5px;color:#f2d39b;
+  }
+  .gap-box b{color:#ffe2a8}
+  .gap-box ul{margin:8px 0 0;padding-left:18px}
+  .gap-box li{margin:3px 0}
+
+  /* alerts */
+  .alerts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:20px;align-items:start}
+  .panel{border:1px solid var(--line);border-radius:16px;background:rgba(11,34,54,.55);padding:20px 22px;min-width:0}
+  .panel h3{margin:0 0 4px;font-size:16px;letter-spacing:-.01em}
+  .panel p.sub{margin:0 0 14px;font-size:12px;color:var(--muted)}
+  .steps{margin:0;padding:0;list-style:none;counter-reset:step}
+  .steps li{counter-increment:step;display:flex;gap:12px;padding:9px 0;font-size:12.5px;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.055);min-width:0}
+  .steps li span{min-width:0;overflow-wrap:anywhere}
+  .steps li:last-child{border-bottom:0}
+  .steps li::before{
+    content:counter(step);flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;
+    font-family:var(--mono);font-size:10px;color:var(--cyan);border:1px solid rgba(85,194,232,.3);margin-top:1px;
+  }
+  .steps b{color:var(--text);font-weight:600}
+  .steps code{font-family:var(--mono);font-size:10.5px;color:var(--cyan);background:rgba(85,194,232,.08);padding:1px 4px;border-radius:3px}
+  .script-box{position:relative}
+  .script-box pre{
+    margin:0;border:1px solid var(--line);border-radius:10px;background:#04101a;padding:14px;
+    max-height:330px;overflow:auto;font-family:var(--mono);font-size:10.5px;line-height:1.55;color:#b9d4e3;
+  }
+  .script-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+  .script-bar span{font-size:11px;color:var(--muted-2)}
+  .warn-note{
+    margin-top:12px;border-radius:9px;border:1px solid rgba(245,183,78,.24);background:rgba(245,183,78,.06);
+    padding:10px 12px;font-size:11.5px;color:#f2d39b;line-height:1.5;
+  }
+  .file-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+
+  /* footer */
+  footer{margin-top:64px;border-top:1px solid var(--line);padding:26px 0 40px}
+  .foot{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .foot p{margin:0;font-size:11.5px;color:var(--muted-2);max-width:70ch;line-height:1.6}
+  .foot a{color:var(--muted);text-decoration:none}
+  .foot a:hover{color:var(--cyan)}
+  .foot .sig{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2)}
+
+  .toast{
+    position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);z-index:80;
+    background:#0e2a42;border:1px solid var(--line-2);color:var(--text);padding:10px 16px;border-radius:9px;
+    font-size:12px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;box-shadow:0 18px 40px rgba(0,0,0,.5);
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  @media(max-width:1000px){
+    .hero{grid-template-columns:1fr;gap:30px}
+    .next-card{max-width:520px}
+    .profile-bar{grid-template-columns:repeat(3,minmax(0,1fr));align-items:end}
+    .profile-bar .pb-title{grid-column:1/-1}
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .alerts{grid-template-columns:minmax(0,1fr)}
+    .head-nav{display:none}
+  }
+  @media(max-width:620px){
+    .head-mail{display:none}
+  }
+  @media(max-width:760px){
+    .wrap{padding:0 18px}
+    .hero{padding:42px 0 20px}
+    .grid,.play-grid{grid-template-columns:1fr}
+    .profile-bar{grid-template-columns:repeat(2,minmax(0,1fr))}
+    html{scroll-padding-top:80px}
+    .toolbar{position:static}
+    .search{margin-left:0;max-width:none;flex-basis:100%}
+    .tl-row{grid-template-columns:70px 1fr;gap:10px}
+    .tl-days{grid-column:2;margin-top:-6px}
+    .docs{grid-template-columns:1fr}
+    .count b{font-size:52px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+  }
+  @media print{
+    body{background:#fff;color:#111;background-image:none}
+    .site-head,.profile-bar,.toolbar,.hero,.alerts,.play-grid,footer,.toast{display:none!important}
+    section{padding:12px 0}
+    .card,.panel,.timeline{border-color:#bbb;background:#fff;color:#111;break-inside:avoid}
+    .card h3,.deadline,.fit,.src{color:#111}
+    .tag,.status{border-color:#999;color:#333}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="Scholarship Desk home">
+      <span class="mark">KF</span>
+      <span><b>Scholarship Desk</b><span>Khuzaifa Farid</span></span>
+    </a>
+    <nav class="head-nav" aria-label="Sections">
+      <a href="#tracker">Tracker</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#playbook">Playbook</a>
+      <a href="#alerts">Alerts</a>
+    </nav>
+    <a class="head-mail" href="mailto:khuzaifakhufa@gmail.com">
+      <span class="dot-live" aria-hidden="true"></span>
+      khuzaifakhufa@gmail.com
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Fully funded · 2027 / 2028 · Europe · North America · East Asia</div>
+        <h1>Your scholarship<br><span class="grad">command center.</span></h1>
+        <p class="lead">
+          Verified deadlines, funding terms, eligibility gates and document checklists — built for a
+          software engineering student in Pakistan applying to fully funded bachelor's and master's programmes abroad.
+        </p>
+        <div class="hero-meta">
+          <span class="pill"><b id="meta-count">21</b> programmes tracked</span>
+          <span class="pill"><b>IELTS / TOEFL</b> done</span>
+          <span class="pill"><b>Last verified</b> <span id="meta-verified">26 Nov 2026</span></span>
+        </div>
+      </div>
+
+      <aside class="next-card" aria-label="Next deadline">
+        <div class="next-top">
+          <span>Next hard deadline</span>
+          <span class="live"><span class="dot-live"></span>LIVE</span>
+        </div>
+        <div class="count"><b id="cd-days">—</b><span id="cd-unit">days left</span></div>
+        <div class="next-name" id="cd-name">Loading…</div>
+        <div class="next-sub" id="cd-sub">—</div>
+        <div class="count-bar"><i id="cd-bar"></i></div>
+        <div class="next-foot">
+          <span class="mono" style="font-size:10.5px;color:var(--muted-2)" id="cd-date">—</span>
+          <a id="cd-link" href="#tracker">Open checklist →</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="profile-bar" aria-label="Eligibility profile">
+      <div class="pb-title">Eligibility profile<b>Saved in this browser</b></div>
+      <div class="field">
+        <label for="p-dob">Date of birth</label>
+        <input id="p-dob" type="date" >
+      </div>
+      <div class="field">
+        <label for="p-cgpa">CGPA (0–4)</label>
+        <input id="p-cgpa" type="number" min="0" max="4" step="0.01" placeholder="e.g. 3.4">
+      </div>
+      <div class="field">
+        <label for="p-grad">Graduation year</label>
+        <input id="p-grad" type="number" min="2026" max="2032" step="1" placeholder="2028">
+      </div>
+      <div class="field">
+        <label for="p-restart">Restart bachelor's abroad?</label>
+        <select id="p-restart">
+          <option value="">Not decided</option>
+          <option value="yes">Yes, if fully funded</option>
+          <option value="no">No, master's only</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="p-exp">Work experience</label>
+        <select id="p-exp">
+          <option value="">Not set</option>
+          <option value="none">None yet</option>
+          <option value="lt1">Under 1 year</option>
+          <option value="1to2">1–2 years</option>
+          <option value="2plus">2+ years</option>
+        </select>
+      </div>
+      <button class="reset" id="p-reset" type="button">Clear</button>
+      <div class="profile-note" id="profile-note">
+        Add your date of birth to see <b>age-cap checks</b> on Türkiye, CSC, GKS and MEXT. Nothing leaves this page.
+      </div>
+    </div>
+
+    <div class="stats" aria-label="Summary">
+      <div class="stat" style="--accent:var(--green)"><b id="st-open">0</b><span>Open now</span><small>Portals accepting</small></div>
+      <div class="stat" style="--accent:var(--amber)"><b id="st-90">0</b><span>Due in 90 days</span><small>Hard deadlines</small></div>
+      <div class="stat" style="--accent:var(--cyan)"><b id="st-masters">0</b><span>Master's pipeline</span><small>2028 entry</small></div>
+      <div class="stat" style="--accent:var(--violet)"><b id="st-total">0</b><span>Total tracked</span><small>Official + expected</small></div>
+    </div>
+  </div>
+
+  <section id="tracker">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-kicker">01 · Tracker</div>
+          <h2>Every programme, one screen.</h2>
+          <p>Status, funding, the eligibility gate that can disqualify you, and the documents each portal asks for. Expand a card for the checklist.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="toolbar-in">
+          <div class="seg" role="group" aria-label="Study level">
+            <button type="button" data-level="all" aria-pressed="true">All</button>
+            <button type="button" data-level="Bachelor's" aria-pressed="false">Bachelor's 2027</button>
+            <button type="button" data-level="Master's" aria-pressed="false">Master's 2028</button>
+          </div>
+          <div class="chips" id="region-chips" role="group" aria-label="Region"></div>
+          <div class="chips" id="status-chips" role="group" aria-label="Status"></div>
+          <div class="search">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="search" type="search" placeholder="Search country, programme, benefit…" aria-label="Search scholarships">
+          </div>
+          <span class="result-count" id="result-count">21 shown</span>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-kicker">02 · Timeline</div>
+          <h2>The next 18 months, in order.</h2>
+          <p>Only dated deadlines appear here. "Expected" rows use last cycle's date until the new call is published.</p>
+        </div>
+      </div>
+      <div class="timeline" id="timeline-list"></div>
+    </div>
+  </section>
+
+  <section id="playbook">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-kicker">03 · Playbook</div>
+          <h2>What to prepare before a portal opens.</h2>
+          <p>You cannot submit a scholarship for someone else — signatures, transcripts and essays are yours. What you can do is arrive at every portal with the whole kit ready.</p>
+        </div>
+      </div>
+
+      <div class="play-grid">
+        <details class="play" open>
+          <summary><span class="num">00</span><span><b>Lock the facts that filter programmes</b><small>Age, CGPA, degree status, restart decision</small></span></summary>
+          <div class="play-body">
+            <ul>
+              <li><input type="checkbox" data-play="fact-age"><span><b>Exact age on each deadline.</b> Türkiye requires under 21 for bachelor's; CSC and GKS under 25; MEXT 17–24; MEXT Research under 35; GKS Master's under 40.</span></li>
+              <li><input type="checkbox" data-play="fact-cgpa"><span><b>CGPA and percentage.</b> Most programmes want 60–80%+ or 2.5–3.0/4.0. Put the number in the profile bar above.</span></li>
+              <li><input type="checkbox" data-play="fact-degree"><span><b>Degree status letter.</b> You are in the 5th semester of BSSE, expected 2028. For master's applications you need a predicted-degree letter from your university.</span></li>
+              <li><input type="checkbox" data-play="fact-restart"><span><b>Restart vs master's.</b> A 2027 bachelor's abroad means starting from year one; transfer credit is rare for scholarship holders. Decide before writing essays.</span></li>
+              <li><input type="checkbox" data-play="fact-passport"><span><b>Passport valid for 18+ months.</b> Renew now if it expires before mid-2028.</span></li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="play">
+          <summary><span class="num">01</span><span><b>Documents vault</b><small>One folder, PDF, named consistently</small></span></summary>
+          <div class="play-body">
+            <ul>
+              <li><input type="checkbox" data-play="doc-passport"><span>Passport scan + white-background photo (35×45 mm)</span></li>
+              <li><input type="checkbox" data-play="doc-hssc"><span>HSSC / A-Level transcript and certificate (attested)</span></li>
+              <li><input type="checkbox" data-play="doc-uni"><span>Current university transcript + enrollment letter</span></li>
+              <li><input type="checkbox" data-play="doc-ielts"><span>IELTS / TOEFL score report (TRF number, valid 2 years)</span></li>
+              <li><input type="checkbox" data-play="doc-cv"><span>CV — use the 2-page PDF already built</span></li>
+              <li><input type="checkbox" data-play="doc-sop"><span>Master SOP + a shorter study plan</span></li>
+              <li><input type="checkbox" data-play="doc-lor"><span>2–3 recommendation letters, signed and dated</span></li>
+              <li><input type="checkbox" data-play="doc-medical"><span>Medical form / HIV test (some portals ask after shortlisting)</span></li>
+            </ul>
+            <details class="tpl">
+              <summary>Naming convention</summary>
+              <div class="tpl-bar"><span>File names</span><button class="copy" type="button" data-copy="naming">copy</button></div>
+              <pre id="tpl-naming">Farid_Khuzaifa_Passport.pdf
+Farid_Khuzaifa_HSSC_Transcript.pdf
+Farid_Khuzaifa_University_Transcript.pdf
+Farid_Khuzaifa_IELTS.pdf
+Farid_Khuzaifa_CV.pdf
+Farid_Khuzaifa_SOP_CSC.docx
+Farid_Khuzaifa_LOR_Professor1.pdf</pre>
+            </details>
+          </div>
+        </details>
+
+        <details class="play">
+          <summary><span class="num">02</span><span><b>Essays and recommenders</b><small>One master SOP, then modular cuts</small></span></summary>
+          <div class="play-body">
+            <ul>
+              <li><input type="checkbox" data-play="essay-sop"><span>Draft the 700-word SOP: origin → why software engineering → evidence → why this country/programme → plan → why funding matters.</span></li>
+              <li><input type="checkbox" data-play="essay-plan"><span>Cut a 1-page study plan for CSC and Türkiye (programme choices, timeline, return plan).</span></li>
+              <li><input type="checkbox" data-play="essay-lead"><span>Write the leadership/community essay for Fulbright and Chevening.</span></li>
+              <li><input type="checkbox" data-play="essay-lor"><span>Ask 2 professors + 1 supervisor at least 3 weeks before the first deadline; send them the CV and bullet points.</span></li>
+              <li><input type="checkbox" data-play="essay-review"><span>Get one outside reader to check grammar and consistency of dates.</span></li>
+            </ul>
+            <details class="tpl">
+              <summary>SOP skeleton (fill the brackets)</summary>
+              <div class="tpl-bar"><span>Structure</span><button class="copy" type="button" data-copy="sop">copy</button></div>
+              <pre id="tpl-sop">Paragraph 1 — Hook (80 words)
+Open with the concrete problem you want to solve with software. No childhood story unless it is specific.
+
+Paragraph 2 — Evidence (150 words)
+Two projects: what you built, the stack, the measurable result. Link the portfolio.
+
+Paragraph 3 — Why this programme (150 words)
+Name 2 modules and 1 professor/lab. Explain what you cannot learn in Pakistan.
+
+Paragraph 4 — Why this country (100 words)
+Be specific about the ecosystem, not the weather.
+
+Paragraph 5 — Plan after graduation (100 words)
+Job, research or venture; how you will transfer the knowledge back.
+
+Paragraph 6 — Why funding (100 words)
+State the need plainly. Tie it to the plan, not to sympathy.</pre>
+            </details>
+            <details class="tpl">
+              <summary>Recommendation request email</summary>
+              <div class="tpl-bar"><span>Email</span><button class="copy" type="button" data-copy="lor">copy</button></div>
+              <pre id="tpl-lor">Subject: Recommendation letter request — [Scholarship], deadline [date]
+
+Dear Professor [Name],
+
+I am applying to [scholarship/programme] for [year]. The deadline is [date], and the portal needs a letter uploaded by you.
+
+I have attached my CV, transcript, and a one-page summary of the projects we worked on. The points I hope you can speak to are:
+1. [Project / course] — [specific contribution]
+2. [Research / lab] — [specific skill]
+3. [Character trait] — [short example]
+
+I can draft a skeleton if that helps; you would edit it in your own voice. Please tell me if you can support this by [date - 7 days].
+
+Thank you,
+Khuzaifa Farid
+khuzaifakhufa@gmail.com</pre>
+            </details>
+          </div>
+        </details>
+
+        <details class="play">
+          <summary><span class="num">03</span><span><b>Portal sequence</b><small>Which form opens when</small></span></summary>
+          <div class="play-body">
+            <ul>
+              <li><input type="checkbox" data-play="portal-hec"><span><b>HEC + CSC (open now):</b> create the HEC account, complete the form, then the CSC form with Agency 5861. Both are mandatory.</span></li>
+              <li><input type="checkbox" data-play="portal-kaist"><span><b>KAIST (open now):</b> application + recommendation letter by 21 Jan 2027, 18:00 KST.</span></li>
+              <li><input type="checkbox" data-play="portal-turkiye"><span><b>Türkiye Bursları (10 Jan):</b> tbbs account, programme choices, statement, interview prep.</span></li>
+              <li><input type="checkbox" data-play="portal-sh"><span><b>Stipendium Hungaricum:</b> watch the call page; prepare the Tempus account before it opens.</span></li>
+              <li><input type="checkbox" data-play="portal-usefp"><span><b>Fulbright:</b> USEFP account opens ~Feb 2027; request GRE only if the call requires it.</span></li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="play">
+          <summary><span class="num">04</span><span><b>After you submit</b><small>Track, interview, visa</small></span></summary>
+          <div class="play-body">
+            <ul>
+              <li><input type="checkbox" data-play="after-id"><span>Save every application ID and confirmation PDF in the same folder.</span></li>
+              <li><input type="checkbox" data-play="after-interview"><span>Prepare a 90-second "tell me about yourself" and 3 project stories for interviews (Türkiye interviews run Apr–Jun).</span></li>
+              <li><input type="checkbox" data-play="after-email"><span>Email the programme once if you have no confirmation within 10 days. Keep it short.</span></li>
+              <li><input type="checkbox" data-play="after-visa"><span>Start the visa and medical checks only after the award letter; do not pay agents upfront.</span></li>
+            </ul>
+          </div>
+        </details>
+
+        <div class="gap-box">
+          <b>Three facts still missing from this plan.</b> The tracker cannot compute your real eligibility without them:
+          <ul>
+            <li><b>Your date of birth</b> — Türkiye's under-21 cap can remove it from the list entirely.</li>
+            <li><b>CGPA / percentage</b> — most portals cut at 60–80% before humans read the essay.</li>
+            <li><b>Restart or master's only</b> — a 2027 bachelor's abroad means starting over; a 2028 master's is the lower-risk path.</li>
+          </ul>
+          Add them in the profile bar above; the card checks update instantly and stay on this device.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="alerts">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="sec-kicker">04 · Alerts</div>
+          <h2>A weekly email you actually own.</h2>
+          <p>No passwords shared. The mailer runs inside your own Google account and reads the tracker data. Set it once; it runs every Monday at 09:00 Pakistan time.</p>
+        </div>
+      </div>
+
+      <div class="alerts">
+        <div class="panel">
+          <h3>Set up the Gmail digest</h3>
+          <p class="sub">About 5 minutes. You approve Google's permission screen yourself.</p>
+          <ol class="steps">
+            <li><span>Open <b>script.google.com</b> → <b>New project</b>. Sign in as <b>khuzaifakhufa@gmail.com</b>.</span></li>
+            <li><span>Delete the default <code>myFunction</code> and paste the script from the box on the right.</span></li>
+            <li><span>Click <b>Save</b>, then run <code>sendTestEmail</code>. Approve access: <b>Advanced → Go to project → Allow</b>.</span></li>
+            <li><span>Check your inbox for the test. Then run <code>createWeeklyTrigger</code> once.</span></li>
+            <li><span>In <b>Project Settings</b>, set the time zone to <b>Asia/Karachi</b> so 09:00 means 09:00.</span></li>
+            <li><span>Already published: this folder is live at <b>khufakim.github.io/my-cv/scholarships</b> and <code>JSON_URL</code> points there, so every upload refreshes the email.</span></li>
+          </ol>
+          <div class="file-links">
+            <a class="btn primary" href="scholarships.ics" download>Download deadline calendar (.ics)</a>
+            <a class="btn" href="scholarships.csv" download>Download CSV</a>
+            <a class="btn" href="email-digest.gs" download>Download the script</a>
+          </div>
+          <div class="warn-note">
+            The script sends email as you, to you. It cannot log into scholarship portals, sign documents or submit applications.
+            Those steps need your accounts and your signature. Use the tracker to arrive prepared, not to automate identity.
+          </div>
+        </div>
+
+        <div class="panel script-box">
+          <div class="script-bar">
+            <span>email-digest.gs</span>
+            <button class="copy" type="button" data-copy="script" style="font-size:10px;padding:5px 9px">Copy full script</button>
+          </div>
+          <pre id="script-preview">Loading script…</pre>
+          <script type="text/plain" id="apps-script-b64">__APPS_SCRIPT__</script>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <p>
+        Built for <b>Khuzaifa Farid</b> · <a href="mailto:khuzaifakhufa@gmail.com">khuzaifakhufa@gmail.com</a><br>
+        Dates marked <span style="color:var(--teal)">Official</span> were read from the programme's own page on 26 Nov 2026.
+        Dates marked <span style="color:var(--amber)">Expected</span> follow the previous cycle and must be confirmed when the new call opens.
+        Funding rules, age caps and document lists change without notice — always confirm on the official page before paying a fee or booking a test.
+      </p>
+    </div>
+    <div class="sig">Scholarship Desk · v1.0<br><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const PROFILE_KEY = "kf.scholarship.profile.v1";
+const CHECK_KEY = "kf.scholarship.checks.v1";
+const APPLIED_KEY = "kf.scholarship.applied.v1";
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = (v = "") => String(v).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const store = {
+  get(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } },
+  set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
+};
+
+const profile = Object.assign(
+  { dob: "", cgpa: "", grad: "", restart: "", exp: "" },
+  store.get(PROFILE_KEY, {})
+);
+let checks = store.get(CHECK_KEY, {});
+let applied = store.get(APPLIED_KEY, {});
+
+function parseDate(value) {
+  if (!value) return null;
+  const d = new Date(value.length === 10 ? value + "T23:59:59" : value);
+  return isNaN(d) ? null : d;
+}
+function daysTo(value) {
+  const d = parseDate(value);
+  if (!d) return null;
+  return Math.floor((d.getTime() - Date.now()) / 86400000);
+}
+function fmtDate(value, opts = { day: "numeric", month: "short", year: "numeric" }) {
+  if (!value) return "—";
+  const raw = String(value);
+  const d = new Date((raw.length > 10 ? raw.slice(0, 10) : raw) + "T12:00:00");
+  return isNaN(d) ? "—" : d.toLocaleDateString("en-GB", opts);
+}
+function fmtMonth(value) {
+  const d = parseDate(value);
+  return d ? d.toLocaleDateString("en-GB", { month: "long", year: "numeric" }) : "—";
+}
+function fmtCountdown(ms) {
+  if (ms <= 0) return "closed";
+  const d = Math.floor(ms / 86400000);
+  const h = Math.floor(ms % 86400000 / 3600000);
+  const m = Math.floor(ms % 3600000 / 60000);
+  return d + "d " + h + "h " + m + "m";
+}
+function ageOn(dob, dateValue) {
+  if (!dob) return null;
+  const b = new Date(dob + "T00:00:00");
+  const d = parseDate(dateValue);
+  if (isNaN(b) || !d) return null;
+  let age = d.getFullYear() - b.getFullYear();
+  const before = d.getMonth() < b.getMonth() || (d.getMonth() === b.getMonth() && d.getDate() < b.getDate());
+  if (before) age--;
+  return age;
+}
+function ageNow(dob) { return ageOn(dob, new Date().toISOString().slice(0, 10)); }
+
+function statusOf(s) {
+  const days = daysTo(s.deadline);
+  if (days !== null && days < 0) return { key: "closed", label: "Closed", cls: "s-closed" };
+  if (s.status === "open") return { key: "open", label: "Open now", cls: "s-open" };
+  if (s.status === "soon") {
+    const openDays = daysTo(s.openDate);
+    return { key: "soon", label: openDays !== null && openDays > 0 ? "Opens " + fmtDate(s.openDate, { day: "numeric", month: "short" }) : "Opening now", cls: "s-soon" };
+  }
+  return { key: "expected", label: "Expected", cls: "s-expected" };
+}
+
+function fitOf(s) {
+  const deadline = s.deadline;
+  const age = ageOn(profile.dob, deadline);
+  if (age !== null && s.ageMax !== undefined && age > s.ageMax) {
+    return { tone: "bad", text: "Age " + age + " at the deadline; this programme requires you to be " + s.ageMax + " or younger" + (s.ageMax === 20 ? " (under 21)." : ".") };
+  }
+  if (age !== null && s.ageMin !== undefined && age < s.ageMin) {
+    return { tone: "bad", text: "Age " + age + " at the deadline; minimum is " + s.ageMin + "." };
+  }
+  if (s.restart && profile.restart === "no") {
+    return { tone: "warn", text: "Requires starting a bachelor's from year one — your profile says master's only." };
+  }
+  if (s.experience && (profile.exp === "none" || profile.exp === "lt1")) {
+    return { tone: "warn", text: "Needs " + s.experience + " of work experience; you currently have little or none." };
+  }
+  if (s.level === "Master's" && profile.grad && Number(profile.grad) > s.startYear) {
+    return { tone: "info", text: "You graduate in " + profile.grad + "; apply in your final year with a predicted-degree letter." };
+  }
+  if (age !== null && s.ageMax !== undefined) {
+    return { tone: "ok", text: "Age " + age + " at the deadline — inside the " + s.ageMax + "-or-younger cap." };
+  }
+  if (profile.dob && s.level === "Master's") {
+    return { tone: "ok", text: "No age cap on this programme." };
+  }
+  return null;
+}
+
+function benefitsHtml(s) {
+  const tags = s.benefits.map((b, i) => `<span class="tag${i === 0 ? " full" : ""}">${esc(b)}</span>`);
+  return tags.join("");
+}
+
+function docKey(s, doc) { return s.id + "::" + doc; }
+
+function cardHtml(s) {
+  const st = statusOf(s);
+  const days = daysTo(s.deadline);
+  const fit = fitOf(s);
+  const isApplied = !!applied[s.id];
+  const left = days === null ? "" : days < 0 ? "closed" : days === 0 ? "closes today" : days + " days left";
+  const urgent = days !== null && days >= 0 && days <= 30 ? " urgent" : "";
+  const edge = st.key === "open" ? "var(--green)" : st.key === "soon" ? "var(--amber)" : s.priority === 1 ? "rgba(85,194,232,.55)" : "rgba(255,255,255,.12)";
+  const calStart = (s.deadline || "").slice(0, 10).replace(/-/g, "");
+  const calEndDate = parseDate(s.deadline);
+  const calEnd = calEndDate ? new Date(calEndDate.getTime() + 86400000).toISOString().slice(0, 10).replace(/-/g, "") : calStart;
+  const gcal = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + encodeURIComponent("DEADLINE: " + s.name) +
+    "&dates=" + calStart + "/" + calEnd +
+    "&details=" + encodeURIComponent(s.deadlineLabel + " — " + s.funding + ". Source: " + s.sourceUrl) +
+    "&location=" + encodeURIComponent(s.country);
+  return `
+  <article class="card${isApplied ? " applied" : ""}" id="${esc(s.id)}" data-id="${esc(s.id)}" data-level="${esc(s.level)}" data-region="${esc(s.region)}" style="--edge:${edge}">
+    <div class="card-top">
+      <div class="loc"><span class="cc">${esc(s.code)}</span>${esc(s.country)}<span style="opacity:.4">/</span>${esc(s.region)}</div>
+      <span class="status ${st.cls}">${st.label}</span>
+    </div>
+    <h3>${esc(s.name)}</h3>
+    <div class="deadline">
+      <svg class="clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <b>${esc(s.deadlineLabel)}</b>
+      ${left ? `<span class="left${urgent}">${left}</span>` : ""}
+    </div>
+    <div class="fund">${benefitsHtml(s)}</div>
+    <p class="fit">${esc(s.fit)}</p>
+    <div class="card-actions">
+      <a class="btn primary" href="${esc(s.applyUrl)}" target="_blank" rel="noopener">Official portal ↗</a>
+      <a class="btn" href="${gcal}" target="_blank" rel="noopener">+ Calendar</a>
+      <button class="btn ${isApplied ? "applied" : "ghost"}" type="button" data-apply="${esc(s.id)}">${isApplied ? "Applied ✓" : "Mark applied"}</button>
+    </div>
+    <details class="kit">
+      <summary>Eligibility, documents and source</summary>
+      <div class="kit-body">
+        ${fit ? `<div class="fitcheck ${fit.tone}"><span>${fit.tone === "bad" ? "!" : fit.tone === "warn" ? "!" : "i"}</span><span>${esc(fit.text)}</span></div>` : `<div class="fitcheck info"><span>i</span><span>Add your date of birth and degree details in the profile bar to run the eligibility check.</span></div>`}
+        <div class="kit-block">
+          <h4>Who can apply</h4>
+          <ul>${s.eligibility.map(e => `<li>${esc(e)}</li>`).join("")}</ul>
+        </div>
+        <div class="kit-block">
+          <h4>Checklist</h4>
+          <ul class="docs">
+            ${s.docs.map(d => {
+              const k = docKey(s, d);
+              return `<li><input type="checkbox" data-check="${esc(k)}" ${checks[k] ? "checked" : ""}><span>${esc(d)}</span></li>`;
+            }).join("")}
+          </ul>
+        </div>
+        <div class="kit-block">
+          <h4>Note</h4>
+          <div>${esc(s.note)}</div>
+        </div>
+        <div class="src">
+          <span class="${s.verified === "official" ? "verified" : "unverified"}">${s.verified === "official" ? "Official source" : "Expected — verify"}</span>
+          · <a href="${esc(s.sourceUrl)}" target="_blank" rel="noopener">Programme page</a>
+          · verified ${esc(DATA.lastVerified)}
+        </div>
+      </div>
+    </details>
+  </article>`;
+}
+
+/* filters */
+let filterLevel = "all";
+let filterRegion = "all";
+let filterStatus = "all";
+let query = "";
+
+function matches(s) {
+  if (filterLevel !== "all" && s.level !== filterLevel) return false;
+  if (filterRegion !== "all" && s.region !== filterRegion) return false;
+  const days = daysTo(s.deadline);
+  if (filterStatus === "open" && statusOf(s).key !== "open") return false;
+  if (filterStatus === "90" && !(days !== null && days >= 0 && days <= 90)) return false;
+  if (filterStatus === "expected" && statusOf(s).key !== "expected") return false;
+  if (query) {
+    const hay = [s.name, s.short, s.country, s.region, s.level, s.funding, s.benefits.join(" "), s.eligibility.join(" "), s.fit].join(" ").toLowerCase();
+    if (!hay.includes(query)) return false;
+  }
+  return true;
+}
+
+function sortCards(a, b) {
+  const rank = s => statusOf(s).key === "open" ? 0 : statusOf(s).key === "soon" ? 1 : statusOf(s).key === "closed" ? 3 : 2;
+  const r = rank(a) - rank(b);
+  if (r) return r;
+  if (a.priority !== b.priority) return a.priority - b.priority;
+  return (parseDate(a.deadline)?.getTime() || 0) - (parseDate(b.deadline)?.getTime() || 0);
+}
+
+function renderGrid() {
+  const list = DATA.scholarships.filter(matches).sort(sortCards);
+  $("#grid").innerHTML = list.length
+    ? list.map(cardHtml).join("")
+    : `<div class="empty">No programme matches these filters. Try clearing the search or switching region.</div>`;
+  $("#result-count").textContent = list.length + " shown";
+  restoreCheckboxes();
+}
+
+function renderChips() {
+  const regions = ["all", "Europe", "North America", "East Asia", "Middle East"];
+  $("#region-chips").innerHTML = regions.map(r => {
+    const n = r === "all" ? DATA.scholarships.length : DATA.scholarships.filter(s => s.region === r).length;
+    return `<button class="chip" type="button" data-region="${esc(r)}" aria-pressed="${filterRegion === r}">${r === "all" ? "All regions" : esc(r)}<b>${n}</b></button>`;
+  }).join("");
+  const statuses = [["all", "Any status"], ["open", "Open now"], ["90", "Next 90 days"], ["expected", "Expected"]];
+  $("#status-chips").innerHTML = statuses.map(([k, label]) => {
+    let n = DATA.scholarships.length;
+    if (k === "open") n = DATA.scholarships.filter(s => statusOf(s).key === "open").length;
+    if (k === "90") n = DATA.scholarships.filter(s => { const d = daysTo(s.deadline); return d !== null && d >= 0 && d <= 90; }).length;
+    if (k === "expected") n = DATA.scholarships.filter(s => statusOf(s).key === "expected").length;
+    return `<button class="chip" type="button" data-status="${k}" aria-pressed="${filterStatus === k}">${label}<b>${n}</b></button>`;
+  }).join("");
+  $$("#region-chips .chip").forEach(b => b.addEventListener("click", () => { filterRegion = b.dataset.region; renderChips(); renderGrid(); }));
+  $$("#status-chips .chip").forEach(b => b.addEventListener("click", () => { filterStatus = b.dataset.status; renderChips(); renderGrid(); }));
+}
+
+function renderStats() {
+  const open = DATA.scholarships.filter(s => statusOf(s).key === "open").length;
+  const soon = DATA.scholarships.filter(s => { const d = daysTo(s.deadline); return d !== null && d >= 0 && d <= 90; }).length;
+  const masters = DATA.scholarships.filter(s => s.level === "Master's").length;
+  $("#st-open").textContent = open;
+  $("#st-90").textContent = soon;
+  $("#st-masters").textContent = masters;
+  $("#st-total").textContent = DATA.scholarships.length;
+  $("#meta-count").textContent = DATA.scholarships.length;
+  $("#meta-verified").textContent = fmtDate(DATA.lastVerified);
+}
+
+function renderNext() {
+  const live = DATA.scholarships
+    .filter(s => ["open", "soon"].includes(statusOf(s).key) && daysTo(s.deadline) >= 0)
+    .sort(sortCards);
+  if (!live.length) {
+    $("#cd-days").textContent = "—";
+    $("#cd-name").textContent = "No dated deadline in the next cycle";
+    $("#cd-sub").textContent = "Check the expected list below.";
+    return;
+  }
+  const next = live[0];
+  const d = parseDate(next.deadline);
+  const open = parseDate(next.openDate) || d;
+  const total = Math.max(1, d - open);
+  const elapsed = Math.min(total, Math.max(0, Date.now() - open));
+  const days = daysTo(next.deadline);
+  $("#cd-days").textContent = days;
+  $("#cd-unit").textContent = days === 1 ? "day left" : "days left";
+  $("#cd-name").textContent = next.name;
+  $("#cd-sub").textContent = next.country + " · " + next.level + " · " + next.funding;
+  $("#cd-date").textContent = next.deadlineLabel;
+  $("#cd-link").textContent = "Open " + next.short + " checklist →";
+  $("#cd-link").href = "#" + next.id;
+  $("#cd-bar").style.width = Math.round(elapsed / total * 100) + "%";
+}
+
+function renderTimeline() {
+  const rows = DATA.scholarships
+    .filter(s => daysTo(s.deadline) !== null && daysTo(s.deadline) >= -1)
+    .sort((a, b) => (parseDate(a.deadline) || 0) - (parseDate(b.deadline) || 0));
+  if (!rows.length) { $("#timeline-list").innerHTML = `<div class="empty">No upcoming deadlines.</div>`; return; }
+  let html = "";
+  let current = "";
+  rows.forEach(s => {
+    const month = fmtMonth(s.deadline);
+    if (month !== current) {
+      current = month;
+      const inMonth = rows.filter(r => fmtMonth(r.deadline) === month).length;
+      html += `<div class="tl-month"><b>${esc(month)}</b><span>${inMonth} deadline${inMonth > 1 ? "s" : ""}</span></div>`;
+    }
+    const d = daysTo(s.deadline);
+    html += `<a class="tl-row" href="#${esc(s.id)}">
+      <span class="tl-date">${esc(fmtDate(s.deadline, { day: "2-digit", month: "short" }))}</span>
+      <span class="tl-name">${esc(s.name)}<small>${esc(s.country)} · ${esc(s.level)} · ${esc(s.funding)}</small></span>
+      <span class="tl-days${d <= 30 ? " urgent" : ""}">${d < 0 ? "closed" : d === 0 ? "today" : "in " + d + "d"}</span>
+    </a>`;
+  });
+  $("#timeline-list").innerHTML = html;
+}
+
+function restoreCheckboxes() {
+  $$("[data-check]").forEach(cb => {
+    cb.checked = !!checks[cb.dataset.check];
+    cb.addEventListener("change", () => {
+      checks[cb.dataset.check] = cb.checked;
+      store.set(CHECK_KEY, checks);
+    });
+  });
+  $$("[data-apply]").forEach(btn => btn.addEventListener("click", () => {
+    const id = btn.dataset.apply;
+    applied[id] = !applied[id];
+    store.set(APPLIED_KEY, applied);
+    renderGrid();
+    toast(applied[id] ? "Marked as applied — now save the confirmation PDF." : "Removed from applied.");
+  }));
+}
+
+/* profile */
+function loadProfile() {
+  $("#p-dob").value = profile.dob || "";
+  $("#p-cgpa").value = profile.cgpa || "";
+  $("#p-grad").value = profile.grad || "";
+  $("#p-restart").value = profile.restart || "";
+  $("#p-exp").value = profile.exp || "";
+}
+function saveProfile() {
+  profile.dob = $("#p-dob").value;
+  profile.cgpa = $("#p-cgpa").value;
+  profile.grad = $("#p-grad").value;
+  profile.restart = $("#p-restart").value;
+  profile.exp = $("#p-exp").value;
+  store.set(PROFILE_KEY, profile);
+  const age = ageNow(profile.dob);
+  const bits = [];
+  if (age !== null) bits.push("Age today: <b>" + age + "</b>");
+  if (profile.cgpa) bits.push("CGPA <b>" + profile.cgpa + "</b>");
+  if (profile.grad) bits.push("Graduating <b>" + profile.grad + "</b>");
+  $("#profile-note").innerHTML = bits.length
+    ? "Checks running on every card. " + bits.join(" · ") + ". Saved on this device only."
+    : "Add your date of birth to see <b>age-cap checks</b> on Türkiye, CSC, GKS and MEXT. Nothing leaves this page.";
+  renderGrid();
+  renderNext();
+}
+["p-dob", "p-cgpa", "p-grad", "p-restart", "p-exp"].forEach(id => $("#" + id).addEventListener("change", saveProfile));
+$("#p-reset").addEventListener("click", () => {
+  profile.dob = ""; profile.cgpa = ""; profile.grad = ""; profile.restart = ""; profile.exp = "";
+  store.set(PROFILE_KEY, profile);
+  loadProfile(); saveProfile();
+});
+
+/* playbook checkboxes */
+const playState = store.get("kf.scholarship.play.v1", {});
+$$("[data-play]").forEach(cb => {
+  cb.checked = !!playState[cb.dataset.play];
+  cb.addEventListener("change", () => { playState[cb.dataset.play] = cb.checked; store.set("kf.scholarship.play.v1", playState); });
+});
+
+/* toolbar events */
+$$(".seg button").forEach(b => b.addEventListener("click", () => {
+  filterLevel = b.dataset.level;
+  $$(".seg button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  renderGrid();
+}));
+$("#search").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); renderGrid(); });
+
+/* copy */
+function toast(msg) {
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(window.__toast);
+  window.__toast = setTimeout(() => t.classList.remove("show"), 2600);
+}
+function copyText(text, label) {
+  navigator.clipboard.writeText(text).then(() => toast(label + " copied.")).catch(() => {
+    const ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); toast(label + " copied."); } catch { toast("Copy failed — select the text manually."); }
+    ta.remove();
+  });
+}
+let appsScriptText = "";
+try {
+  const b64 = $("#apps-script-b64").textContent.trim();
+  const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  appsScriptText = new TextDecoder().decode(bytes);
+  $("#script-preview").textContent = appsScriptText.split("\n").slice(0, 26).join("\n") + "\n…";
+} catch (e) {
+  appsScriptText = "";
+  $("#script-preview").textContent = "Script preview unavailable. Open email-digest.gs from the folder.";
+}
+document.addEventListener("click", e => {
+  const btn = e.target.closest("[data-copy]");
+  if (!btn) return;
+  e.preventDefault();
+  e.stopPropagation();
+  const key = btn.dataset.copy;
+  if (key === "script") return copyText(appsScriptText, "Full Apps Script");
+  const map = { naming: "tpl-naming", sop: "tpl-sop", lor: "tpl-lor" };
+  const el = document.getElementById(map[key]);
+  if (el) copyText(el.textContent, "Template");
+});
+
+/* init */
+loadProfile();
+renderStats();
+renderChips();
+renderGrid();
+renderNext();
+renderTimeline();
+setInterval(renderNext, 60000);
+</script>
+</body>
+</html>

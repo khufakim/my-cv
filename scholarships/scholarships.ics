@@ -1,0 +1,934 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Scholarship Desk//Khuzaifa Farid//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Scholarships — Khuzaifa Farid
+X-WR-CALDESC:Fully funded scholarship deadlines for Europe, North America 
+ and East Asia.
+X-WR-TIMEZONE:Asia/Karachi
+BEGIN:VTIMEZONE
+TZID:Asia/Karachi
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0500
+TZOFFSETTO:+0500
+TZNAME:PKT
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:deadline-hec-csc-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+SUMMARY:DEADLINE · Chinese Government Scholarship (Type A\, via HEC)
+DESCRIPTION:5 Jan 2027 · 4:00 PM PKT | Fully funded | Apply: https://scho
+ larship.hec.gov.pk | Confirm: https://www.hec.gov.pk/site/CGSP | Official
+  HEC page: 61 seats total (25 bachelor's\, 21 master's\, 15 PhD)\; deadli
+ ne 5 Jan 2027 at 4:00 PM PST\; both portals mandatory.
+URL:https://scholarship.hec.gov.pk
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Chinese Government Scholarship (Type A\, 
+ via HEC)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Chinese Government Scholarship (Type A\, v
+ ia HEC)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Chinese Government Scholarship (Type A\, v
+ ia HEC)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-kaist-ug-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:DEADLINE · KAIST International Undergraduate + KAIST Scholarship
+DESCRIPTION:14 Jan 2027 · 6:00 PM KST | Fully funded | Apply: https://adm
+ ission.kaist.ac.kr/intl-undergraduate/application/apply | Confirm: https:
+ //admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/A
+ pplicationTimeline | Official timeline: Regular track 10 Nov 2026 – 14 
+ Jan 2027\, 18:00 KST. Recommendation letter due 21 Jan 2027. Scholarship 
+ needs a 2.7/4.3 GPA after freshman year.
+URL:https://admission.kaist.ac.kr/intl-undergraduate/application/apply
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — KAIST International Undergraduate + KAIST
+  Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — KAIST International Undergraduate + KAIST 
+ Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — KAIST International Undergraduate + KAIST 
+ Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-nyuad-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+SUMMARY:DEADLINE · NYU Abu Dhabi — need-based full aid
+DESCRIPTION:5 Jan 2027 · 11:59 PM ET | Full need-based aid | Apply: https
+ ://nyuad.nyu.edu/en/admissions/undergraduate/apply.html | Confirm: https:
+ //nyuad.nyu.edu/en/admissions/undergraduate/apply/key-dates.html | Offici
+ al key dates: Regular Decision 5 Jan 2027\; CSS Profile 1 Feb 2027. Outsi
+ de your three target regions — kept as a wildcard.
+URL:https://nyuad.nyu.edu/en/admissions/undergraduate/apply.html
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — NYU Abu Dhabi — need-based full aid
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — NYU Abu Dhabi — need-based full aid
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — NYU Abu Dhabi — need-based full aid
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-khalifa-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:DEADLINE · Khalifa University Undergraduate Scholarship
+DESCRIPTION:1 Feb 2027 | Fully funded | Apply: https://www.ku.ac.ae/admiss
+ ions/undergraduate | Confirm: https://www.ku.ac.ae/admissions/undergradua
+ te | Official: Fall 2027 undergraduate deadline 1 Feb 2027. Confirm the e
+ xact scholarship terms on the financial aid page.
+URL:https://www.ku.ac.ae/admissions/undergraduate
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Khalifa University Undergraduate Scholars
+ hip
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Khalifa University Undergraduate Scholarsh
+ ip
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Khalifa University Undergraduate Scholarsh
+ ip
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-turkiye-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270220
+DTEND;VALUE=DATE:20270221
+SUMMARY:DEADLINE · Türkiye Bursları (Türkiye Scholarships)
+DESCRIPTION:20 Feb 2027 (opens 10 Jan) | Fully funded | Apply: https://tbb
+ s.turkiyeburslari.gov.tr | Confirm: https://www.turkiyeburslari.gov.tr/ca
+ lendar | Official calendar: general application 10 Jan – 20 Feb (annual
+ \, year not printed on the page). Interviews Apr–Jun\; results early Au
+ gust.
+URL:https://tbbs.turkiyeburslari.gov.tr
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Türkiye Bursları (Türkiye Scholarships
+ )
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Türkiye Bursları (Türkiye Scholarships)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Türkiye Bursları (Türkiye Scholarships)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-stipendium-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:DEADLINE · Stipendium Hungaricum
+DESCRIPTION:~15 Jan 2027 (call not published) | Fully funded | Apply: http
+ s://apply.stipendiumhungaricum.hu | Confirm: https://stipendiumhungaricum
+ .hu/ | Official site still says 'Application is closed for the 2026/27 ac
+ ademic year' as of 26 Nov 2026. The 2027/28 call is expected mid-Nov 2026
+  – mid-Jan 2027 based on previous cycles. Confirm before paying for any
+ thing.
+URL:https://apply.stipendiumhungaricum.hu
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Stipendium Hungaricum
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Stipendium Hungaricum
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Stipendium Hungaricum
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-romania-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270331
+DTEND;VALUE=DATE:20270401
+SUMMARY:DEADLINE · Romanian Government Scholarship (MFA)
+DESCRIPTION:~31 Mar 2027 (expected) | Fully funded | Apply: https://schola
+ rships.studyinromania.gov.ro | Confirm: https://scholarships.studyinroman
+ ia.gov.ro | The 2027/28 call is not published yet. Last cycle ran 16 Feb 
+ – 31 Mar 2026.
+URL:https://scholarships.studyinromania.gov.ro
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Romanian Government Scholarship (MFA)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Romanian Government Scholarship (MFA)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Romanian Government Scholarship (MFA)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-russia-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:DEADLINE · Russian Government Scholarship Quota
+DESCRIPTION:~15 Jan 2027 (country-specific) | Fully funded | Apply: https:
+ //education-in-russia.com/ | Confirm: https://education-in-russia.com/ | 
+ The portal is JavaScript-heavy and country-specific. Treat the January da
+ te as provisional until the Pakistan page shows it.
+URL:https://education-in-russia.com/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Russian Government Scholarship Quota
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Russian Government Scholarship Quota
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Russian Government Scholarship Quota
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-mext-ug-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:DEADLINE · MEXT Undergraduate Scholarship
+DESCRIPTION:Apr–May 2027 (embassy window) | Fully funded | Apply: https:
+ //www.pk.emb-japan.go.jp/itpr_en/scholarship.html | Confirm: https://www.
+ pk.emb-japan.go.jp/itpr_en/scholarship.html | Dates follow the annual emb
+ assy cycle. Confirm with the Embassy of Japan in Islamabad when the 2028 
+ call is posted.
+URL:https://www.pk.emb-japan.go.jp/itpr_en/scholarship.html
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — MEXT Undergraduate Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — MEXT Undergraduate Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — MEXT Undergraduate Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-gks-u-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270930
+DTEND;VALUE=DATE:20271001
+SUMMARY:DEADLINE · Global Korea Scholarship — Undergraduate
+DESCRIPTION:Sep 2027 (embassy track) | Fully funded | Apply: https://www.s
+ tudyinkorea.go.kr | Confirm: https://www.studyinkorea.go.kr | Dates follo
+ w the annual GKS cycle. Confirm with the Korean Embassy in Islamabad.
+URL:https://www.studyinkorea.go.kr
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Global Korea Scholarship — Undergraduat
+ e
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Global Korea Scholarship — Undergraduate
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Global Korea Scholarship — Undergraduate
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-fulbright-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:DEADLINE · Fulbright Foreign Student Program (Pakistan)
+DESCRIPTION:~1 Apr 2027 (expected) | Fully funded | Apply: https://www.use
+ fp.org/scholarships/fulbright.cfm | Confirm: https://www.usefp.org/schola
+ rships/fulbright.cfm | The 2027-28 competition closed on 1 Apr 2026. The 
+ 2028-29 cycle is expected Feb–Apr 2027. You would apply in your final u
+ ndergraduate year with a predicted-degree letter.
+URL:https://www.usefp.org/scholarships/fulbright.cfm
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Fulbright Foreign Student Program (Pakist
+ an)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Fulbright Foreign Student Program (Pakista
+ n)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Fulbright Foreign Student Program (Pakista
+ n)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-chevening-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20271006
+DTEND;VALUE=DATE:20271007
+SUMMARY:DEADLINE · Chevening Scholarship
+DESCRIPTION:~6 Oct 2027 (expected) | Fully funded | Apply: https://www.che
+ vening.org/scholarships/ | Confirm: https://www.chevening.org/scholarship
+ s/ | The 2027/28 window closed on 6 Oct 2026. The next window is expected
+  Aug–Oct 2027.
+URL:https://www.chevening.org/scholarships/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Chevening Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Chevening Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Chevening Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-erasmus-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20280115
+DTEND;VALUE=DATE:20280116
+SUMMARY:DEADLINE · Erasmus Mundus Joint Master's
+DESCRIPTION:Oct 2027 – Jan 2028 (per programme) | Fully funded | Apply: 
+ https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en |
+  Confirm: https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-cata
+ logue_en | Deadlines are set per programme\, usually Oct 2027 – Jan 202
+ 8 for the 2028 intake. Shortlist programmes early.
+URL:https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_e
+ n
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Erasmus Mundus Joint Master's
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Erasmus Mundus Joint Master's
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Erasmus Mundus Joint Master's
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-daad-epos-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20271031
+DTEND;VALUE=DATE:20271101
+SUMMARY:DEADLINE · DAAD EPOS Development-Related Postgraduate Courses
+DESCRIPTION:Jul–Oct 2027 (per course) | Fully funded | Apply: https://ww
+ w.daad.de/en/study-and-research-in-germany/scholarships/ | Confirm: https
+ ://www.daad.de/en/study-and-research-in-germany/scholarships/ | Deadlines
+  vary by course (Jul–Oct 2027). Check the EPOS course list before short
+ listing.
+URL:https://www.daad.de/en/study-and-research-in-germany/scholarships/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — DAAD EPOS Development-Related Postgraduat
+ e Courses
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — DAAD EPOS Development-Related Postgraduate
+  Courses
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — DAAD EPOS Development-Related Postgraduate
+  Courses
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-eiffel-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20280108
+DTEND;VALUE=DATE:20280109
+SUMMARY:DEADLINE · Eiffel Excellence Scholarship
+DESCRIPTION:~8 Jan 2028 (nomination) | Fully funded | Apply: https://www.c
+ ampusfrance.org/en/eiffel-scholarship-program-of-excellence | Confirm: ht
+ tps://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence | 
+ Institution nomination deadline is usually early January. Contact French 
+ programme directors in late 2027.
+URL:https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellen
+ ce
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Eiffel Excellence Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Eiffel Excellence Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Eiffel Excellence Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-si-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20280120
+DTEND;VALUE=DATE:20280121
+SUMMARY:DEADLINE · Swedish Institute Scholarships for Global Professional
+ s
+DESCRIPTION:~20 Jan 2028 (expected) | Fully funded | Apply: https://si.se/
+ en/apply/scholarships/ | Confirm: https://si.se/en/apply/scholarships/ | 
+ Window usually early Dec 2027 – mid/late Jan 2028. You must apply to a 
+ Swedish master's through universityadmissions.se first.
+URL:https://si.se/en/apply/scholarships/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Swedish Institute Scholarships for Global
+  Professionals
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Swedish Institute Scholarships for Global 
+ Professionals
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Swedish Institute Scholarships for Global 
+ Professionals
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-mext-research-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:DEADLINE · MEXT Research Student Scholarship
+DESCRIPTION:Apr–May 2027 (embassy window) | Fully funded | Apply: https:
+ //www.pk.emb-japan.go.jp/itpr_en/scholarship.html | Confirm: https://www.
+ pk.emb-japan.go.jp/itpr_en/scholarship.html | Embassy window is usually A
+ pril–May 2027 for 2028 arrival. Confirm with the Embassy of Japan in Is
+ lamabad.
+URL:https://www.pk.emb-japan.go.jp/itpr_en/scholarship.html
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — MEXT Research Student Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — MEXT Research Student Scholarship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — MEXT Research Student Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-gks-m-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20280315
+DTEND;VALUE=DATE:20280316
+SUMMARY:DEADLINE · Global Korea Scholarship — Master's
+DESCRIPTION:Feb–Mar 2028 (embassy track) | Fully funded | Apply: https:/
+ /www.studyinkorea.go.kr | Confirm: https://www.studyinkorea.go.kr | Confi
+ rm the 2028 timeline with the Korean Embassy in Islamabad.
+URL:https://www.studyinkorea.go.kr
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Global Korea Scholarship — Master's
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Global Korea Scholarship — Master's
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Global Korea Scholarship — Master's
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-kaist-ms-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20280315
+DTEND;VALUE=DATE:20280316
+SUMMARY:DEADLINE · KAIST International Master's + KAIST Scholarship
+DESCRIPTION:Sep 2027 / Mar 2028 rounds | Fully funded | Apply: https://adm
+ ission.kaist.ac.kr/intl-graduate/ | Confirm: https://admission.kaist.ac.k
+ r/intl-graduate/ | Two admission rounds (Spring and Fall). Funding is arr
+ anged with the lab/professor\; confirm details on the graduate admissions
+  page.
+URL:https://admission.kaist.ac.kr/intl-graduate/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — KAIST International Master's + KAIST Scho
+ larship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — KAIST International Master's + KAIST Schol
+ arship
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — KAIST International Master's + KAIST Schol
+ arship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-csc-m-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20280430
+DTEND;VALUE=DATE:20280501
+SUMMARY:DEADLINE · Chinese Government Scholarship — Master's
+DESCRIPTION:Dec 2027 – Apr 2028 (route-dependent) | Fully funded | Apply
+ : https://www.campuschina.org | Confirm: https://www.campuschina.org | HE
+ C Type A usually closes in January\; university Type B can run to April 2
+ 028. Watch both.
+URL:https://www.campuschina.org
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Chinese Government Scholarship — Master
+ 's
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Chinese Government Scholarship — Master'
+ s
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Chinese Government Scholarship — Master'
+ s
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:deadline-commonwealth-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20271115
+DTEND;VALUE=DATE:20271116
+SUMMARY:DEADLINE · Commonwealth Master's Scholarship (via HEC)
+DESCRIPTION:Oct–Nov 2027 (HEC announcement) | Fully funded | Apply: http
+ s://www.hec.gov.pk/ | Confirm: https://www.hec.gov.pk/ | The 2027-28 HEC 
+ page is already marked past. The 2028 cycle is expected Oct–Nov 2027.
+URL:https://www.hec.gov.pk/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P30D
+ACTION:DISPLAY
+DESCRIPTION:30 days to apply — Commonwealth Master's Scholarship (via HE
+ C)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:1 week to apply — Commonwealth Master's Scholarship (via HEC
+ )
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Closes tomorrow — Commonwealth Master's Scholarship (via HEC
+ )
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-turkiye-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270110
+DTEND;VALUE=DATE:20270111
+SUMMARY:OPENS · Türkiye Bursları (Türkiye Scholarships)
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.turkiyeburslari.gov.tr/calendar
+URL:https://www.turkiyeburslari.gov.tr/calendar
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Türkiye Bursları (Türkiye Scholarships)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-romania-2027@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270216
+DTEND;VALUE=DATE:20270217
+SUMMARY:OPENS · Romanian Government Scholarship (MFA)
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://scholarships.studyinromania.gov.ro
+URL:https://scholarships.studyinromania.gov.ro
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Romanian Government Scholarship (MFA)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-mext-ug-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:OPENS · MEXT Undergraduate Scholarship
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.pk.emb-japan.go.jp/itpr_en/scholarship.html
+URL:https://www.pk.emb-japan.go.jp/itpr_en/scholarship.html
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — MEXT Undergraduate Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-gks-u-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270901
+DTEND;VALUE=DATE:20270902
+SUMMARY:OPENS · Global Korea Scholarship — Undergraduate
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.studyinkorea.go.kr
+URL:https://www.studyinkorea.go.kr
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Global Korea Scholarship — Undergraduate
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-fulbright-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270201
+DTEND;VALUE=DATE:20270202
+SUMMARY:OPENS · Fulbright Foreign Student Program (Pakistan)
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.usefp.org/scholarships/fulbright.cfm
+URL:https://www.usefp.org/scholarships/fulbright.cfm
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Fulbright Foreign Student Program (Pakistan
+ )
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-chevening-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270801
+DTEND;VALUE=DATE:20270802
+SUMMARY:OPENS · Chevening Scholarship
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.chevening.org/scholarships/
+URL:https://www.chevening.org/scholarships/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Chevening Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-erasmus-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20271001
+DTEND;VALUE=DATE:20271002
+SUMMARY:OPENS · Erasmus Mundus Joint Master's
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.eacea.ec.europa.eu/scholarships/erasmus-mund
+ us-catalogue_en
+URL:https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_e
+ n
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Erasmus Mundus Joint Master's
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-daad-epos-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270701
+DTEND;VALUE=DATE:20270702
+SUMMARY:OPENS · DAAD EPOS Development-Related Postgraduate Courses
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.daad.de/en/study-and-research-in-germany/sch
+ olarships/
+URL:https://www.daad.de/en/study-and-research-in-germany/scholarships/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — DAAD EPOS Development-Related Postgraduate 
+ Courses
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-eiffel-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20271201
+DTEND;VALUE=DATE:20271202
+SUMMARY:OPENS · Eiffel Excellence Scholarship
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.campusfrance.org/en/eiffel-scholarship-progr
+ am-of-excellence
+URL:https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellen
+ ce
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Eiffel Excellence Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-si-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20271201
+DTEND;VALUE=DATE:20271202
+SUMMARY:OPENS · Swedish Institute Scholarships for Global Professionals
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://si.se/en/apply/scholarships/
+URL:https://si.se/en/apply/scholarships/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Swedish Institute Scholarships for Global P
+ rofessionals
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-mext-research-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:OPENS · MEXT Research Student Scholarship
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.pk.emb-japan.go.jp/itpr_en/scholarship.html
+URL:https://www.pk.emb-japan.go.jp/itpr_en/scholarship.html
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — MEXT Research Student Scholarship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-gks-m-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20280201
+DTEND;VALUE=DATE:20280202
+SUMMARY:OPENS · Global Korea Scholarship — Master's
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.studyinkorea.go.kr
+URL:https://www.studyinkorea.go.kr
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Global Korea Scholarship — Master's
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-kaist-ms-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20270901
+DTEND;VALUE=DATE:20270902
+SUMMARY:OPENS · KAIST International Master's + KAIST Scholarship
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://admission.kaist.ac.kr/intl-graduate/
+URL:https://admission.kaist.ac.kr/intl-graduate/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — KAIST International Master's + KAIST Schola
+ rship
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-csc-m-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20271201
+DTEND;VALUE=DATE:20271202
+SUMMARY:OPENS · Chinese Government Scholarship — Master's
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.campuschina.org
+URL:https://www.campuschina.org
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Chinese Government Scholarship — Master's
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:opens-commonwealth-2028@scholarships.khufakim.github.io
+DTSTAMP:20261126T053239Z
+DTSTART;VALUE=DATE:20271001
+DTEND;VALUE=DATE:20271002
+SUMMARY:OPENS · Commonwealth Master's Scholarship (via HEC)
+DESCRIPTION:Application window expected to open. Prepare the portal accoun
+ t and documents. https://www.hec.gov.pk/
+URL:https://www.hec.gov.pk/
+TRANSP:TRANSPARENT
+CATEGORIES:SCHOLARSHIP
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Opens tomorrow — Commonwealth Master's Scholarship (via HEC)
+END:VALARM
+END:VEVENT
+END:VCALENDAR
