@@ -325,7 +325,8 @@ function resetSnapshot() {
 
 function getData_() {
   try {
-    const res = UrlFetchApp.fetch(CONFIG.JSON_URL, { muteHttpExceptions: true });
+    const url = CONFIG.JSON_URL + (CONFIG.JSON_URL.indexOf("?") < 0 ? "?" : "&") + "cb=" + Date.now();
+    const res = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
     if (res.getResponseCode() === 200) {
       const parsed = JSON.parse(res.getContentText());
       if (parsed && parsed.scholarships && parsed.scholarships.length) {
